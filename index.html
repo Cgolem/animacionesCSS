@@ -226,6 +226,36 @@
                 transition-delay: 0.3s;
                 height: 100%;
             }
+
+
+            /* Sexto efecto: Transición de izquierda a derecha (rellenado de 
+               botón)  */
+            #btn-six {
+                position: relative;
+                transition: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+                transition-duration: 0.4s;
+            }
+
+            #btn-six::after {
+                content: '';
+                position: absolute;
+                background-color: #E333FF;
+                width: 1%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                transition: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+                transition-duration: 0.4s;
+                z-index: -1;
+            }
+
+            #btn-six:hover {
+                color: #FFFFFF;
+            }
+
+            #btn-six:hover::after {
+                width: 100%;
+            }
             
         </style>
     </head>
@@ -262,6 +292,11 @@
         <!-- Quinto efecto -->
         <button id="btn-five">
             <span id="btn-five-span"> Hover </span>
+        </button>
+
+        <!-- Sexto efecto -->
+        <button id="btn-six">
+            Hover
         </button>
         
         
