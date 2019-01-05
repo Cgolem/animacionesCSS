@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="io-edge">
+        <title> Animaciones con CSS </title>
+
+        <!-- estilos -->
+        <style>
+            #box {
+                /* Ancho */
+                width: 200px;
+                /* Alto */
+                height: 200px;
+                /* Margen */
+                margin: 50px;
+                /* Color de fondo de nuestro estilo */
+                background-color: #FF5733;
+                /* Velocidad del efecto aplicado a nuestro estilo */
+                transition-duration: 2000ms;
+                /* Retardo que se aplica a un efecto para efectuarse, es decir, espera el tiempo 
+                   del delay, posteriormente se ejecuta el efecto */
+                transition-delay: 0s; /*2s;*/
+                /* Velocidad de nuestro efecto, pero con la diferencia de que el efecto puede cambiar
+                   su velocidad en el transcurso de su ejecución, es decir, puede iniciar y terminar
+                   el efecto a la misma velocidad (linear), iniciar lento, a la mitad ir más rápido y terminar
+                   mucho más rápido, entre otros. Desactivamos "transition-delay" para ejecutarlo mejor */
+                transition-timing-function: linear;
+                /* Aplica el efecto segun la propiedad */
+                transition-property: all;
+            }
+
+            /* Efecto tipo hover (flotante) a nuestro estilo anterior "box" */
+            #box:hover {
+                width: 400px;
+                height: 400px;
+            }
+
+            /* Botones */
+            button {}
+            
+        </style>
+    </head>
+
+    <!-- Cuerpo del Archivo -->
+    <body>
+
+        <!-- Ejemplo básico 
+        <div id="box"></div>
+        -->
+
+        <!-- Botones con estilos -->
+        <button id="btn-one">
+            Hover
+        </button>
+
+        
+    </body>
+
+</html>
