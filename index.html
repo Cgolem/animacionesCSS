@@ -406,7 +406,52 @@
             #box-transformation-four:hover {
                 transform: skew(20deg, 0deg);               
             }
+
+            /* Quinta Transformación: Animaciones */
+            #box-transformation-five {
+                width: 200px;
+                height: 200px;
+                margin: 50px;
+                background-color: #FF5733;
+
+                /* Se agrega al usar testTwo*/
+                animation: test 4s linear 0s, testTwo 3s linear 3s infinite;
+            }
+
+            /*  Se borra al usar testTwo
+            #box-transformation-five:hover {
+                animation: test 4s linear 0s;
+            }
+            */
+
+            @keyframes test {
+                0% {
+                    width: 400px;
+                }
+                20%, 80% {
+                    height: 400px;
+                }
+                50% {
+                    width: 100px;
+                }
+                100% {
+                    width: 200px;
+                }
+            }
             
+            /* Si usamos testTwo, borramos #box-transformation-five:hover y agregamos a 
+               #box-transformation-five la animación */
+            @keyframes testTwo {
+                0% {
+                    transform: rotate(0deg);
+                }
+                50% {
+                    transform: rotate(180deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
             
         </style>
     </head>
@@ -473,6 +518,9 @@
 
         <!-- Cuarta Transformación -->
         <div id="box-transformation-four"></div>
+
+        <!-- Quinta Transformación -->
+        <div id="box-transformation-five"></div>
         
     </body>
 
