@@ -306,6 +306,40 @@
             #btn-seven:hover::before {
                 border-width: 0 0 40px 40px;
             }
+
+            /* Octavo efecto: Circulo al centro se convierte en rectangulo y 
+               Rellena el botón */
+               #btn-eight {
+                position: relative;
+                transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                transition-duration: 0.4s;
+            }
+
+            #btn-eight::after {
+                content: '';
+                position: absolute;
+                background-color: #E333FF;
+                width: 0%;
+                height: 0%;
+                top: 45%;
+                left: 45%;
+                transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                transition-duration: 0.4s;
+                z-index: -1;
+                border-radius: 50%;
+            }
+
+            #btn-eight:hover::after {
+                width: 100%;
+                height: 100%;
+                top: 0%;
+                left: 0%;
+                border-radius: 0%;
+            }
+
+            #btn-eight:hover {
+                color: #FFFFFF;
+            }
             
         </style>
     </head>
@@ -352,6 +386,11 @@
         <!-- Séptimo efecto -->
         <button id="btn-seven">
             <span id="btn-seven-text"> Hover </span>
+        </button>
+
+        <!-- Octavo efecto -->
+        <button id="btn-eight">
+            Hover
         </button>
         
         
