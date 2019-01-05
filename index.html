@@ -92,6 +92,33 @@
             #btn-two:hover::after, #btn-two:hover::before {
                 width: 100%;
             }
+
+            /* Tercer efecto: transición, al pasar el cursor sobre el boton, 
+            éste cambia de color con una transición de abajo hacia arriba */
+            #btn-three {
+                position: relative;
+                transition: 0.5s ease-out;
+            }
+
+            #btn-three::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 0%;
+                background-color: #E333FF;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+                transition: 0.5s ease-in-out;
+            }
+
+            #btn-three:hover {
+                color: #FFFFFF;
+            }
+
+            #btn-three:hover::after {
+                height: 100%;
+            }
             
         </style>
     </head>
@@ -112,6 +139,11 @@
 
         <!-- Segundo efecto-->
         <button id="btn-two">
+            Hover
+        </button>
+
+        <!-- Tercer efecto -->
+        <button id="btn-three">
             Hover
         </button>
 
