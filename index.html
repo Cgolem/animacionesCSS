@@ -452,6 +452,44 @@
                     transform: rotate(360deg);
                 }
             }
+
+
+            /* Spinner */
+
+            /* Primer Spinner: Cuadrados girando con ligero desfase */
+            #spinnerOne {
+                margin: 100px;
+                position: relative;
+            }
+
+            #rect {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100px;
+                background-color: #DBE11F;
+                animation: turn 2s ease-in-out 0s infinite;
+            }
+
+            #rectTwo {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100px;
+                background-color: #ACCF12;
+                animation: turn 2s ease-in-out 1s infinite;
+            }
+
+            @keyframes turn {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
             
         </style>
     </head>
@@ -519,8 +557,16 @@
         <!-- Cuarta Transformación -->
         <div id="box-transformation-four"></div>
 
-        <!-- Quinta Transformación -->
+        <!-- Quinta Transformación 
         <div id="box-transformation-five"></div>
+        -->
+
+        <!-- Spinner -->
+        <!-- Primer Spinner -->
+        <div id="spinnerOne">
+            <div id="rect"></div>
+            <div id="rectTwo"></div>
+        </div>
         
     </body>
 
