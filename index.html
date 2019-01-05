@@ -256,6 +256,56 @@
             #btn-six:hover::after {
                 width: 100%;
             }
+
+            /* Séptimo efecto: Triangulos ocultos en las esquinas superior e inferior 
+               derecha empujan al texto */
+            #btn-seven {
+                position: relative;
+                border: 2px solid #E333FF;
+                transition-duration: 0.4s;
+            }
+
+            #btn-seven::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 0 0 0;
+                border-color: transparent #E333FF transparent #E333FF;
+                transition-duration: 0.4s;
+            }
+
+            #btn-seven::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 0 0 0;
+                border-color: transparent transparent #E333FF transparent;
+                transition-duration: 0.4s;
+            }
+
+            #btn-seven-text {
+                transition-duration: 0.4s;
+            }
+
+            #btn-seven:hover > #btn-seven-text {
+                padding-right: 30px;
+            }
+
+            #btn-seven:hover::after {
+                border-width: 0 40px 40px 0;
+            }
+
+            #btn-seven:hover::before {
+                border-width: 0 0 40px 40px;
+            }
             
         </style>
     </head>
@@ -297,6 +347,11 @@
         <!-- Sexto efecto -->
         <button id="btn-six">
             Hover
+        </button>
+
+        <!-- Séptimo efecto -->
+        <button id="btn-seven">
+            <span id="btn-seven-text"> Hover </span>
         </button>
         
         
