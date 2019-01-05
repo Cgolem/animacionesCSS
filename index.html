@@ -119,6 +119,45 @@
             #btn-three:hover::after {
                 height: 100%;
             }
+
+            /* Cuarto efecto:  */
+            #btn-four {
+                position: relative;
+                transition-duration: 0.4s;
+            }
+
+            #btn-four::after {
+                content: '';
+                position: absolute;
+                width: 0%;
+                height: 0%;
+                background-color: #E333FF;
+                top: 0;
+                right: 0;
+                transition: 0.4s;
+                z-index: -1;
+            }
+
+            #btn-four::before {
+                content: '';
+                position: absolute;
+                width: 0%;
+                height: 0%;
+                background-color: #E333FF;
+                bottom: 0;
+                left: 0;
+                transition: 0.4s;
+                z-index: -1;
+            }
+
+            #btn-four:hover {
+                color: #FFFFFF;
+            }
+
+            #btn-four:hover::after, #btn-four:hover::before {
+                width: 100%;
+                height: 100%;
+            } 
             
         </style>
     </head>
@@ -144,6 +183,11 @@
 
         <!-- Tercer efecto -->
         <button id="btn-three">
+            Hover
+        </button>
+
+        <!-- Cuarto efecto -->
+        <button id="btn-four">
             Hover
         </button>
 
