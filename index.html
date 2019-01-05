@@ -58,6 +58,40 @@
                 background-color: #E333FF;
                 color: #FFFFFF;
             }
+
+
+            /* Con este efecto generaremos una transición de derecha a izquierda 
+               en la parte inferior del boton, y de izquiera a derecha superior 
+               del boton */
+            #btn-two {
+                position: relative;
+            }
+
+            #btn-two::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 2px;
+                background-color: #E333FF;
+                transition-duration: 0.3s;
+            }
+
+            #btn-two::before {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                right: 0;
+                width: 0%;
+                height: 2px;
+                background-color: #E333FF;
+                transition-duration: 0.3s;
+            }
+
+            #btn-two:hover::after, #btn-two:hover::before {
+                width: 100%;
+            }
             
         </style>
     </head>
@@ -73,6 +107,11 @@
 
         <!-- Primer efecto -->
         <button id="btn-one">
+            Hover
+        </button>
+
+        <!-- Segundo efecto-->
+        <button id="btn-two">
             Hover
         </button>
 
