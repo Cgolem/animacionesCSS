@@ -49,6 +49,7 @@
                 font-size: 1.5em;
             }
 
+            /* Primer efecto */
             #btn-one {
                 border: 3px solid #E333FF;
                 transition-duration: 0.3s;
@@ -60,7 +61,7 @@
             }
 
 
-            /* Con este efecto generaremos una transición de derecha a izquierda 
+            /* Segundo efecto: Con este efecto generaremos una transición de derecha a izquierda 
                en la parte inferior del boton, y de izquiera a derecha superior 
                del boton */
             #btn-two {
@@ -340,6 +341,26 @@
             #btn-eight:hover {
                 color: #FFFFFF;
             }
+
+            /* Transformaciones en 2D */
+            /* Primera Transformación: Rotación de elementos */
+            #box-transformation-one {
+                width: 200px;
+                height: 200px;
+                margin: 50px;
+                background-image: linear-gradient(#FF5733, #9E9B9E);
+                transition-duration: 2000ms;
+                transition-delay: 0s;
+                transition-timing-function: linear;
+            }
+
+            #box-transformation-one:hover {
+                transform: rotate(180deg);
+            }
+
+
+            /* Segunda Transformación: Escalación de elementos */
+            
             
         </style>
     </head>
@@ -347,9 +368,9 @@
     <!-- Cuerpo del Archivo -->
     <body>
 
-        <!-- Ejemplo básico 
+        <!-- Ejemplo básico -->
         <div id="box"></div>
-        -->
+        
 
         <!-- Botones con estilos -->
 
@@ -392,7 +413,14 @@
         <button id="btn-eight">
             Hover
         </button>
-        
+
+
+        <!-- Transformaciones en 2D -->
+        <!-- Primera Transformación -->
+        <div id="box-transformation-one"></div>
+
+        <!-- Segunda Transformación -->
+        <div id="box-transformation-two"></div>
         
     </body>
 
