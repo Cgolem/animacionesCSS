@@ -491,7 +491,7 @@
                 }
             }
 
-            /* Segundo Spinner: Cuadrados girando con ligero desfase */
+            /* Segundo Spinner: Pelotitas */
             #spinnerTwo{
                 margin-left: 300px;
             }
@@ -510,11 +510,11 @@
             } 
 
             #circleTwo {
-                animation: colorBall 2s linear 0.4s infinite;
+                animation: colorBall 2s linear 0.5s infinite;
             }
             
             #circleThree {
-                animation: colorBall 2s linear 0.8s infinite;
+                animation: colorBall 2s linear 1s infinite;
             }
 
             #circleFour{
@@ -563,7 +563,48 @@
                     background-color: #ACCF12;
                 }
             }
+
+            /* Tercer Spinner: Rotacion desfasada de bordes de circulo */
+            #spinnerThree {
+                margin-top: 200px;
+                margin-left: 100px;
+                position: relative;
+            }
             
+            #inner {
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                border: 4px solid transparent;
+                border-top-color: #DBE11F;
+                border-bottom-color: #DBE11F;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                animation: turnCircle 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s infinite;
+            }
+
+            #outer {
+                border-radius: 50%;
+                width: 170px;
+                height: 170px;
+                border: 4px solid transparent;
+                border-left-color: #ACCF12;
+                border-right-color: #ACCF12;
+                position: absolute;
+                top: 0;
+                left: 0;
+                animation: turnCircle 2s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s infinite;
+            }
+
+            @keyframes turnCircle {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
             
         </style>
     </head>
@@ -648,6 +689,12 @@
             <div class="circle" id="circleTwo"></div>
             <div class="circle" id="circleThree"></div>
             <div class="circle" id="circleFour"></div>
+        </div>
+
+        <!-- Tercer Spinner -->
+        <div id="spinnerThree">
+            <div id="inner"></div>
+            <div id="outer"></div>
         </div>
         
     </body>
