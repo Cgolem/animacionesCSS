@@ -490,6 +490,80 @@
                     transform: rotate(360deg);
                 }
             }
+
+            /* Segundo Spinner: Cuadrados girando con ligero desfase */
+            #spinnerTwo{
+                margin-left: 300px;
+            }
+
+            .circle{
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background-color: #DBE11F;
+                display: inline-block;
+            }
+
+            #circleOne {
+                animation: ball 2s linear 0s infinite,
+                colorBall 2s linear 0s infinite;
+            } 
+
+            #circleTwo {
+                animation: colorBall 2s linear 0.4s infinite;
+            }
+            
+            #circleThree {
+                animation: colorBall 2s linear 0.8s infinite;
+            }
+
+            #circleFour{
+                animation: ballFour 2s linear 1s infinite, 
+                colorBall 2s linear 1.2s infinite;
+            }
+
+            @keyframes ball {
+                0% {
+                    transform: translateY(-40px)
+                    translateX(-80px);
+                }
+                20%, 80% {
+                    transform: translateY(0px)
+                    translateX(0px);
+                }
+                100% {
+                    transform: translateY(-40px)
+                    translateX(-80px);
+                }
+            }
+
+            @keyframes ballFour {
+                0% {
+                    transform: translateY(-40px)
+                    translateX(80px);
+                }
+                20%, 80% {
+                    transform: translateY(0px)
+                    translateX(0px);
+                }
+                100% {
+                    transform: translateY(-40px)
+                    translateX(80px);
+                }
+            }
+
+            @keyframes colorBall {
+                0% {
+                    background-color: #ACCF12;
+                }
+                20%, 80% {
+                    background-color: #DBE11F;
+                }
+                100% {
+                    background-color: #ACCF12;
+                }
+            }
+            
             
         </style>
     </head>
@@ -566,6 +640,14 @@
         <div id="spinnerOne">
             <div id="rect"></div>
             <div id="rectTwo"></div>
+        </div>
+
+        <!-- Segundo Spinner -->
+        <div id="spinnerTwo">
+            <div class="circle" id="circleOne"></div>
+            <div class="circle" id="circleTwo"></div>
+            <div class="circle" id="circleThree"></div>
+            <div class="circle" id="circleFour"></div>
         </div>
         
     </body>
