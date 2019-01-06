@@ -605,6 +605,61 @@
                     transform: rotate(360deg);
                 }
             }
+
+            /* Cuarto Spinner: Rebote de pelota dentro de cuadro */
+            #spinnerFour {
+                margin-top: 200px;
+                margin-left: 400px;
+            }
+
+            #boxSpinner {
+                width: 150px;
+                height: 150px;
+                background-color: #DBE11F;
+                position: relative;
+            }
+
+            #boxSpinner::after {
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                top: 40%;
+                background-color: #ACCF12;
+                animation: ballInBox 2s linear 0s infinite;
+            }
+
+            #boxSpinner::before {
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                top: 40%;
+                opacity: 0.5;
+                background-color: #ACCF12;
+                animation: ballInBox 2s linear 0.05s infinite;
+            }
+
+            @keyframes ballInBox {
+                0% {
+                    transform: translateX(0px)
+                    translateY(0px);
+                }
+                25% {
+                    transform: translateX(62.5px)
+                    translateY(62.5px);
+                }
+                50% {
+                    transform: translateX(125px)
+                    translateY(0px);
+                }
+                75% {
+                    transform: translateX(62.5px)
+                    translateY(-62.5px);
+                }
+            }
             
         </style>
     </head>
@@ -695,6 +750,12 @@
         <div id="spinnerThree">
             <div id="inner"></div>
             <div id="outer"></div>
+        </div>
+
+
+        <!-- Cuarto Spinner -->
+        <div id="spinnerFour">
+            <div id="boxSpinner"></div>
         </div>
         
     </body>
