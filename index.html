@@ -660,6 +660,57 @@
                     translateY(-62.5px);
                 }
             }
+
+            /* Quinto Spinner: Circulo pulsante con media circunferencia rotando */
+            #spinnerFive {
+                margin-top: 125px;
+                margin-left: 100px;
+            }
+
+            #circleSpinnerFive {
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                background-color: #DBE11F;
+                position: relative;
+                animation: size 2s cubic-bezier(0.215, 0.610, 0.355, 1) 0s infinite;
+            }
+
+            #circleSpinnerFive::after {
+                content: '';
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                border: 8px solid #DBE11F;
+                border-top-color: #ACCF12;
+                border-left-color: #ACCF12;
+                border-left-width: 4px;
+                position: absolute;
+                top: -8px;
+                left: -8px;
+                animation: turnSpinnerFive 2s linear 0s infinite;
+            }
+
+            @keyframes size {
+                0% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.2);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+
+            @keyframes turnSpinnerFive {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
             
         </style>
     </head>
@@ -756,6 +807,11 @@
         <!-- Cuarto Spinner -->
         <div id="spinnerFour">
             <div id="boxSpinner"></div>
+        </div>
+
+        <!-- Cuarto Spinner -->
+        <div id="spinnerFive">
+            <div id="circleSpinnerFive"></div>
         </div>
         
     </body>
